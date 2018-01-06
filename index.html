@@ -1,1 +1,35 @@
+<h1>Welcome to the Blind Brook Trivia Page</h1>
+<h3>To get started, please type in your school email address into the textfield as well as your name</h3>
+<b>First and Last name: </b><span><input type="text" placeholder="First and last name" id="nameTextField"></span>
+<br>
+<br>
+<b>School email address: </b><span><input type="text" placeholder="School email address" id="schoolEmailTextField"></span>
+<br>
+<br>
+<button onclick="register()">Register</button>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC1sVk52AWb13XdwbwekpoWv7mBQLotF3g",
+    authDomain: "bb-trivia.firebaseapp.com",
+    databaseURL: "https://bb-trivia.firebaseio.com",
+    projectId: "bb-trivia",
+    storageBucket: "bb-trivia.appspot.com",
+    messagingSenderId: "373745764412"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+function register(){
+var name = document.getElementById("nameTextField").value
+var email = document.getElementById("schoolEmailTextField").value
+
+var save = firebase.database().ref('user/').push({
+    username: name,
+    email: email
+  });
+}
+
+</script>
 
