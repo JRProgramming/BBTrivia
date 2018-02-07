@@ -32,6 +32,12 @@ var id = save.key
 firebase.database().ref('user/' + id).update({
 identification: id
 })
-
+  firebase.database().ref('Completed/').update("Completion", function(error) {
+  if (error) {
+    alert("Data could not be saved." + error);
+  } else {
+    alert("Data is saved")
+  }
+});
 }
 </script>
