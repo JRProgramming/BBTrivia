@@ -32,11 +32,11 @@ var id = save.key
 firebase.database().ref('user/' + id).update({
 identification: id
 })
-    firebase.database().ref('Completed/').update("Data is saved", function(error) {
+    firebase.database().ref('Completed/').set("Data is saved", function(error) {
         if (error) {
             alert("Data could not be saved." + error);
         } else {
-            alert("TU ERES BUENO IR")
+            location.href = "https:/apple.com"
         }
       });
 }
