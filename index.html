@@ -37,6 +37,7 @@ identification: id
         if (error) {
             alert("Data could not be saved." + error);
         } else {
+            localStorage.setItem("login", true)
             location.href = "https://jrprogramming.github.io/BBTrivia/homePage"
         }
       });
