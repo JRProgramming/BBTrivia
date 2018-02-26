@@ -24,7 +24,7 @@
 function register(){
 var name = document.getElementById("nameTextField").value
 var email = document.getElementById("schoolEmailTextField").value
-localStorage.setItem("name", name);
+localStorage.setItem("BBTrivianame", name);
 var save = firebase.database().ref('user/').push({
     username: name,
     email: email
