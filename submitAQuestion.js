@@ -1,7 +1,7 @@
 function submitQuestion()
 {
 alert("You have submited a question. Great job!")
-var questionName = document.getElementById("questionName").value;
+var questionName = document.getElementById("question").value;
 var correctAnswer = document.getElementById("correctAnswer").value;
 var wrongAnswer1 = document.getElementById("wrongAnswer1").value;
 var wrongAnswer2 = document.getElementById("wrongAnswer2").value;
