@@ -10,5 +10,15 @@ var save = firebase.database().ref('questions/').push({
     wrongAnswer1: wrongAnswer1,
     wrongAnswer2: wrongAnswer2
   });
-
+var id = save.key
+firebase.database().ref('questions/' + id).update({
+    identification: id
+})
+    firebase.database().ref('Completed/').set("Data is saved", function(error) {
+        if (error) {
+            alert("Data could not be saved." + error);
+        } else {
+            location.href = "https://jrprogramming.github.io/BBTrivia/homePage"
+        }
+      });
 }
