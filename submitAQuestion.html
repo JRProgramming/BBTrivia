@@ -16,5 +16,18 @@
 <br>
 <button onclick="submitQuestion()">Submit Question</button>
 <script src="submitAQuestion.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC1sVk52AWb13XdwbwekpoWv7mBQLotF3g",
+    authDomain: "bb-trivia.firebaseapp.com",
+    databaseURL: "https://bb-trivia.firebaseio.com",
+    projectId: "bb-trivia",
+    storageBucket: "bb-trivia.appspot.com",
+    messagingSenderId: "373745764412"
+  };
+  firebase.initializeApp(config);
+</script>
 
 
