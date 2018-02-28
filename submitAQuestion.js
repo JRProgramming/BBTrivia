@@ -1,7 +1,7 @@
 function submitQuestion()
 {
 alert("You have submited a question. Great job!")
-}
+
 
 var save = firebase.database().ref('user/').push({
     username: name,
@@ -19,3 +19,4 @@ identification: id
             location.href = "https://jrprogramming.github.io/BBTrivia/homePage"
         }
       });
+}
