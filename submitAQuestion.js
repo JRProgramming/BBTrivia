@@ -24,4 +24,8 @@ function submitQuestion()
             }
         });
     }   
+    else
+    {
+        alert("You haven't signed in yet.")
+    }
 }
