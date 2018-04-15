@@ -1,4 +1,5 @@
 var array = []
+var correctAnswerNumber = null
 window.onload = function()
 { 
   var updateData = firebase.database().ref("questions");
@@ -13,7 +14,7 @@ window.onload = function()
 var randomNumber = Math.floor((Math.random() * array.length))
 document.getElementById("question").innerHTML = array[randomNumber].questionName
 var mcArray = [1,2,3]
-var correctAnswerNumber = Math.floor((Math.random() * 3) +1)
+correctAnswerNumber = Math.floor((Math.random() * 3) +1)
 mcArray.splice((correctAnswerNumber - 1), 1)
 document.getElementById("mc" + correctAnswerNumber).innerHTML = array[randomNumber].correctAnswer
 var wrongAnswer1number = Math.floor((Math.random() * 2) + 1)
@@ -22,4 +23,39 @@ mcArray.splice((wrongAnswer1number - 1), 1)
 document.getElementById("mc" + mcArray).innerHTML = array[randomNumber].wrongAnswer2
         }
       });
+}
+function submitAnswer1()
+{
+    if(correctAnswerNumber == 1)
+	{
+		alert("yah")
+	}
+    else 
+    {
+
+	}
+}
+
+function submitAnswer2()
+{
+    if(correctAnswerNumber == 2)
+	{
+		alert("yah")
+	}
+    else
+	{
+
+	}
+}
+
+function submitAnswer3()
+{
+	if(correctAnswerNumber == 3)
+	{
+		alert("yah")
+	}
+    else
+	{
+	
+	}
 }
