@@ -3,21 +3,5 @@
 <br>
 <br>
 <button onclick="submitAQuestion()">Submit a question</button>
-<script>
-  function join()
-  {
-    location.href = "https://jrprogramming.github.io/gameTime"
-  }
-  function submitAQuestion()
-  {
-    location.href = "https://jrprogramming.github.io/BBTrivia/submitAQuestion"
-  }
-  window.onload = function() {windowOnload()}
-  function windowOnload()
-  {
-    if (localStorage.getItem("BBTrivianame") != null)
-    {
-    document.getElementById("headline").innerHTML = "Welcome " + localStorage.getItem("BBTrivianame")
-    }
-  }
-</script>
+<script src="homePage.js"></script>
+<script src="/Users/johnnyramirez/Documents/Web Project Folder/BB Trivia/homePage.js"></script>
