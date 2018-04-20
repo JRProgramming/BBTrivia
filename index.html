@@ -20,26 +20,5 @@
   };
   firebase.initializeApp(config);
 </script>
-<script>
-function register(){
-var name = document.getElementById("nameTextField").value
-var email = document.getElementById("schoolEmailTextField").value
-localStorage.setItem("BBTrivianame", name);
-var save = firebase.database().ref('user/').push({
-    username: name,
-    email: email
-  });
-var id = save.key
-firebase.database().ref('user/' + id).update({
-identification: id
-})
-    firebase.database().ref('Completed/').set("Data is saved", function(error) {
-        if (error) {
-            alert("Data could not be saved." + error);
-        } else {
-            localStorage.setItem("login", true)
-            location.href = "https://jrprogramming.github.io/BBTrivia/homePage"
-        }
-      });
-}
-</script>
+<script src="script.js"></script>
+<script src="/Users/johnnyramirez/Documents/Web Project Folder/BB Trivia/script.js"></script>
