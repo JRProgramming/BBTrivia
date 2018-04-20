@@ -3,7 +3,11 @@ function submitQuestion()
     var questionName = document.getElementById("question").value;
     var correctAnswer = document.getElementById("correctAnswer").value;
     var wrongAnswer1 = document.getElementById("wrongAnswer1").value;
-    var wrongAnswer2 = document.getElementById("wrongAnswer2").value;
+    var wrongAnswer2 = document.getElementById("wrongAnswer2").value;\
+    alert(questionName)
+    alert(correctAnswer)
+    alert(wrongAnswer1)
+    alert(wrongAnswer2)
     if(sessionStorage.getItem("BBTrivianame") != null && questionName != "" && correctAnswer != "" && wrongAnswer1 != "" && wrongAnswer2 != "")
     {
 
