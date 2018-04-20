@@ -1,11 +1,13 @@
+var questionName = document.getElementById("question").value;
+var correctAnswer = document.getElementById("correctAnswer").value;
+var wrongAnswer1 = document.getElementById("wrongAnswer1").value;
+var wrongAnswer2 = document.getElementById("wrongAnswer2").value;
+
 function submitQuestion()
 {
-    if(localStorage.getItem("BBTrivianame") != null)
+    if(sessionStorage.getItem("BBTrivianame") != null && questionName != "" && correctAnswer != "" && wrongAnswer1 != "" && wrongAnswer2 != "")
     {
-        var questionName = document.getElementById("question").value;
-        var correctAnswer = document.getElementById("correctAnswer").value;
-        var wrongAnswer1 = document.getElementById("wrongAnswer1").value;
-        var wrongAnswer2 = document.getElementById("wrongAnswer2").value;
+
         var save = firebase.database().ref('questions/').push({
             questionName: questionName,
             correctAnswer: correctAnswer,
@@ -20,10 +22,14 @@ function submitQuestion()
             if (error) {
                 alert("Data could not be saved." + error);
             } else {
-                location.href = "https://jrprogramming.github.io/BBTrivia/homePage"
+                location.href = "homePage.html"
             }
         });
-    }   
+    }
+    else if(questionName = "" || correctAnswer == "" || wrongAnswer1 == "" || wrongAnswer2 == "")
+    {
+      alert("You didn't fill out all of the textfields. Please make sure that you fill out all of the textfields before submitting your question.")
+    }
     else
     {
         alert("You haven't signed in yet.")
