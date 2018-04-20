@@ -1,4 +1,4 @@
 function homePage()
 {
-  location.href = "homepage.html"
+  location.href = "homePage.html"
 }
