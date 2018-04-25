@@ -1,7 +1,24 @@
 <h1 id="headline">Welcome to the homepage</h1>
+<h3>Total questions answered correctly: <span><b id="questionAnsweredCorrectly"></b></span></h3>
+<h3>Total amount of questions asked: <span><b id="questionsAsked"></b></span></h3>
+<h3>Total amount of games won: <span><b id="numberofgameswon"></b></span></h3>
+<h3>Total amount of games played: <span><b id="numberofgamesplayed"></b></span></h3>
 <button onclick="join()">Join the game</button>
 <br>
 <br>
 <button onclick="submitAQuestion()">Submit a question</button>
-<script src="homePage.js"></script>
-<script src="/Users/johnnyramirez/Documents/Web Project Folder/BB Trivia/homePage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initializes the database
+  var config = {
+    apiKey: "AIzaSyC1sVk52AWb13XdwbwekpoWv7mBQLotF3g",
+    authDomain: "bb-trivia.firebaseapp.com",
+    databaseURL: "https://bb-trivia.firebaseio.com",
+    projectId: "bb-trivia",
+    storageBucket: "bb-trivia.appspot.com",
+    messagingSenderId: "373745764412"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="homepage.js"></script>
+<script src="/Users/johnnyramirez/Documents/Web Project Folder/BB Trivia/homepage.js"></script>
