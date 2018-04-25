@@ -4,15 +4,16 @@ function submitQuestion()
   var correctAnswer = document.getElementById("correctAnswer").value;
   var wrongAnswer1 = document.getElementById("wrongAnswer1").value;
   var wrongAnswer2 = document.getElementById("wrongAnswer2").value;
-    if(sessionStorage.getItem("BBTrivianame") != null && questionName != "" && correctAnswer != "" && wrongAnswer1 != "" && wrongAnswer2 != "")
+    if(questionName != "" && correctAnswer != "" && wrongAnswer1 != "" && wrongAnswer2 != "")
     {
-
+        //Makes sure that none of the textfields are blank
         var save = firebase.database().ref('questions/').push({
             questionName: questionName,
             correctAnswer: correctAnswer,
             wrongAnswer1: wrongAnswer1,
             wrongAnswer2: wrongAnswer2
         });
+        //Saves the question to the database
         var id = save.key
         firebase.database().ref('questions/' + id).update({
             identification: id
@@ -24,15 +25,13 @@ function submitQuestion()
                 location.href = "questionsubmitted.html"
             }
         });
+        //Takes you to a new link after you have submitted your question
     }
     else if(questionName = "" || correctAnswer == "" || wrongAnswer1 == "" || wrongAnswer2 == "")
     {
       alert("You didn't fill out all of the textfields. Please make sure that you fill out all of the textfields before submitting your question.")
     }
-    else
-    {
-        alert("You haven't signed in yet.")
-    }
+    //If one of the textfield is blank, it will notify you to fill out the textfields
 }
 window.onload = function()
 {
@@ -40,4 +39,5 @@ window.onload = function()
   {
     location.href = "index.html"
   }
+  //Makes sure to see if the user is signed in
 }
