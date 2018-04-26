@@ -8,6 +8,11 @@ function submitAQuestion()
   location.href = "submitAQuestion.html"
   //This is when the user clicks to submit a question
 }
+function leaderboard()
+{
+  location.href = "leaderboard.html"
+  //This is when the user clicks to check out the leaderboard
+}
 window.onload = function() {windowOnload()}
 function windowOnload()
 {
@@ -41,6 +46,7 @@ function windowOnload()
           document.getElementById("questionsAsked").innerHTML = array[i].totalQuestions
           document.getElementById("numberofgameswon").innerHTML = array[i].gamesWon
           document.getElementById("numberofgamesplayed").innerHTML = array[i].totalGames
+          document.getElementById("numberOfQuestionsSubmitted").innerHTML = array[i].questionsSubmitted
           //Uploads all of the statistics about the user
         }
       }
