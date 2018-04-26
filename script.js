@@ -47,6 +47,7 @@ function register(){
                   email: email,
                   eligible: true,
                   questionsAnswered: 0,
+                  questionsSubmitted: 0,
                   totalQuestions: 0,
                   gamesWon: 0,
                   totalGames: 0
