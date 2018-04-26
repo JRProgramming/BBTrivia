@@ -8,7 +8,7 @@ window.onload = function()
 }
 function homePage()
 {
-  location.href = "homePage.html"
+  location.href = "homepage.html"
   //Goes to the homepage when a button is clicked
 }
 function submitQuestion()
