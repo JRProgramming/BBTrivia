@@ -1,0 +1,61 @@
+<h1>Leaderboard</h1>
+<table>
+  <tr>
+    <th><span><p>Most amount of questions answered correctly</p></span></th>
+    <th><span id="nameQuestionsAnswered" href=""></span></th>
+    <th><span id="questionsAnswered" href=""></span></th>
+  </tr>
+  <tr>
+    <th><span><p>Most amount of questions asked</p></span></th>
+    <th><span id="nameQuestionsAsked" href=""></span></th>
+    <th><span id="amountOfQuestionsAsked"></span></th>
+  </tr>
+  <tr>
+    <th><span><p>Most amount of games won</p></span></th>
+    <th><span id="nameGamesWon" href=""></span></th>
+    <th><span id="gamesWon"></span></th>
+  </tr>
+  <tr>
+    <th><span><p>Most amount of games played</p></span></th>
+    <th><span id="nameGamesPlayed" href=""></span></th>
+    <th><span id="gamesPlayed"></span></th>
+  </tr>
+  <tr>
+    <th><span><p>Most amount of submitted questions</p></span></th>
+    <th><span id="nameSubmittedQuestions" href=""></span></th>
+    <th><span id="submittedQuestions"></span></th>
+  </tr>
+</table>
+<br>
+<br>
+<button onclick="homepage()">Go back to the home page</button>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initializes the database
+  var config = {
+    apiKey: "AIzaSyC1sVk52AWb13XdwbwekpoWv7mBQLotF3g",
+    authDomain: "bb-trivia.firebaseapp.com",
+    databaseURL: "https://bb-trivia.firebaseio.com",
+    projectId: "bb-trivia",
+    storageBucket: "bb-trivia.appspot.com",
+    messagingSenderId: "373745764412"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="leaderboard.js"></script>
+<script src="/Users/johnnyramirez/Documents/Web Project Folder/BB Trivia/leaderboard.js"></script>
