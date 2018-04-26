@@ -65,7 +65,7 @@ window.onload = function()
             else
             {
               alert("Sorry, you can't play today.")
-              location.href = "homePage.html"
+              location.href = "homepage.html"
             } //User has already lost the game and can no longer play
           }
         }
