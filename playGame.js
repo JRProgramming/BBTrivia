@@ -43,8 +43,10 @@ window.onload = function()
               userArray[i].eligible = false
             }
             gamesLeft = userArray[i].gamesLeft
-            gamesLeft = gamesLeft - 1
-            console.log(localStorage.getItem("eligible"))
+	    if(gamesLeft != 0)
+	    {
+              gamesLeft = gamesLeft - 1
+	    }
             if (performance.navigation.type == 1) {
               gameOver()
               //Checks for cheaters
