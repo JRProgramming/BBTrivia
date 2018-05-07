@@ -29,8 +29,8 @@ window.onload = function()
       var maxQuestionSubmitted = Math.max(...questionsSubmitted)
       var maxTotalGames = Math.max(...totalGames)
       var maxGamesWon = Math.max(...gamesWon)
-      document.getElementById("questionsAnswered").innerHTML = maxQuestionsAsked
-      document.getElementById("amountOfQuestionsAsked").innerHTML = maxQuestionsAnswered
+      document.getElementById("questionsAnswered").innerHTML = maxQuestionsAnswered
+      document.getElementById("amountOfQuestionsAsked").innerHTML = maxQuestionsAsked
       document.getElementById("gamesWon").innerHTML = maxGamesWon
       document.getElementById("gamesPlayed").innerHTML = maxTotalGames
       document.getElementById("submittedQuestions").innerHTML = maxQuestionSubmitted
@@ -38,6 +38,7 @@ window.onload = function()
       {
         if(maxQuestionsAsked == userArray[i].totalQuestions)
         {
+          console.log(userArray[i].username)
           document.getElementById("nameQuestionsAsked").innerHTML = userArray[i].username
         }
         if(maxQuestionsAnswered == userArray[i].questionsAnswered)
@@ -65,3 +66,4 @@ function homepage()
 {
   location.href = "homepage.html"
 }
+
