@@ -231,6 +231,7 @@ function gameOver()
     if (error) {
         alert("Data could not be saved." + error);
     } else {
+      console.log("Game over")
       for(var i=0;i<userArray.length;i++)
       {
         if(userArray[i].username == sessionStorage.getItem("BBTrivianame"))
