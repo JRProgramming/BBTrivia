@@ -13,6 +13,9 @@
 <br>
 <br>
 <button onclick="submitQuestion()">Submit Question</button>
+<br>
+<br>
+<button onclick="homepage()">Don't submit and go back to the home page</button>
 <script src="submitAQuestion.js"></script>
 <script src="/Users/johnnyramirez/Documents/Web Project Folder/BB Trivia/submitAQuestion.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -28,4 +31,13 @@
   };
   firebase.initializeApp(config);
 </script>
-
+<style>
+#correctAnswer
+{
+  background-color: green
+}
+#wrongAnswer1, #wrongAnswer2
+{
+  background-color: red
+}
+</style>
