@@ -43,14 +43,14 @@ function register(){
                     alert("Data could not be saved." + error);
                 } else {
                   sessionStorage.setItem("login", true)
-                  location.href = "homePage.html"
+                  location.href = "homepage.html"
                 }
             });
           }
           else
           {
             //The user already has an account right here.
-            location.href = "homePage.html"
+            location.href = "homepage.html"
           }
       }
     })
