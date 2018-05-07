@@ -1,0 +1,29 @@
+<script src="reviewquestion.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC1sVk52AWb13XdwbwekpoWv7mBQLotF3g",
+    authDomain: "bb-trivia.firebaseapp.com",
+    databaseURL: "https://bb-trivia.firebaseio.com",
+    projectId: "bb-trivia",
+    storageBucket: "bb-trivia.appspot.com",
+    messagingSenderId: "373745764412"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<input type="text" id="text">
+<br>
+<button onclick="authenticateUser('')">Log In</button>
+<br>
+<h1 id="question"></h1>
+<br>
+<p id="mc1"></p>
+<p id="mc2"></p>
+<p id="mc3"></p>
+<p id="mc4"></p>
+<br>
+<br>
+<button id="acceptQuestion" onclick="submitQuestion()" disabled>Accept this question</button>
+<button id="rejectQuestion" onclick="deleteQuestion(identity)" disabled>Reject this question</button>
