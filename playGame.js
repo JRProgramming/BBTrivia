@@ -45,10 +45,14 @@ window.onload = function()
             gamesLeft = userArray[i].gamesLeft
             gamesLeft = gamesLeft - 1
             console.log(localStorage.getItem("eligible"))
-            if (performance.navigation.type == 1 || localStorage.getItem("eligible") == false) {
+            if (performance.navigation.type == 1) {
               gameOver()
               //Checks for cheaters
             }
+            if (localStorage.getItem("eligible") == false)
+	    {
+               gameOver()
+	    }
             questionAlreadyAnswered = userArray[i].questionsAnswered
             if(userArray[i].eligible == true)
             {
