@@ -47,6 +47,7 @@ function windowOnload()
           document.getElementById("numberofgameswon").innerHTML = array[i].gamesWon
           document.getElementById("numberofgamesplayed").innerHTML = array[i].totalGames
           document.getElementById("numberOfQuestionsSubmitted").innerHTML = array[i].questionsSubmitted
+          document.getElementById("numberOfGamesLeft").innerHTML = array[i].gamesLeft
           //Uploads all of the statistics about the user
         }
       }
