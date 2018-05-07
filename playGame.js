@@ -49,7 +49,7 @@ window.onload = function()
               gameOver()
               //Checks for cheaters
             }
-            if (localStorage.getItem("eligible") == false)
+            if (localStorage.getItem("eligible") == false || localStorage.getItem("eligible") == "false")
 	    {
                gameOver()
 	    }
