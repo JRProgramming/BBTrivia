@@ -10,7 +10,7 @@ function submitQuestion()
     if(questionName != "" && correctAnswer != "" && wrongAnswer1 != "" && wrongAnswer2 != "")
     {
         //Makes sure that none of the textfields are blank
-        var save = firebase.database().ref('questions/').push({
+        var save = firebase.database().ref('questionFactory/').push({
             questionName: questionName,
             correctAnswer: correctAnswer,
             wrongAnswer1: wrongAnswer1,
@@ -18,7 +18,7 @@ function submitQuestion()
         });
         //Saves the question to the database
         var id = save.key
-        firebase.database().ref('questions/' + id).update({
+        firebase.database().ref('questionFactory/' + id).update({
             identification: id
         })
         firebase.database().ref('Completed/').set("Data is saved", function(error) {
@@ -64,7 +64,7 @@ function submitQuestion()
 
             }
         });
-        
+
     }
     else if(questionName = "" || correctAnswer == "" || wrongAnswer1 == "" || wrongAnswer2 == "")
     {
@@ -80,3 +80,9 @@ window.onload = function()
   }
   //Makes sure to see if the user is signed in
 }
+
+function homepage()
+{
+  location.href = "homepage.html"
+}
+
