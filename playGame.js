@@ -53,7 +53,10 @@ window.onload = function()
             }
             if (localStorage.getItem("eligible") == false || localStorage.getItem("eligible") == "false")
 	    {
-               gameOver()
+		if(userArray[i].date != day)
+		{
+               	  gameOver()
+		}
 	    }
             questionAlreadyAnswered = userArray[i].questionsAnswered
             if(userArray[i].eligible == true)
@@ -70,6 +73,7 @@ window.onload = function()
                   if (error) {
                       alert("Data could not be saved." + error);
                   } else {
+	            localStorage.getItem("eligible") == true
                     generateQuestion()
                   }
                })
