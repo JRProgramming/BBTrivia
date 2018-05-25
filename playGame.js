@@ -55,7 +55,8 @@ window.onload = function()
 	    {
 		if(localStorage.getItem("day") == day)
 		{
-		   gameOVer()
+		   alert("Sorry, you can't play today.")
+              	   location.href = "homepage.html"
 		}
 	    }
             questionAlreadyAnswered = userArray[i].questionsAnswered
