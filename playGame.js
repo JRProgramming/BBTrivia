@@ -53,9 +53,9 @@ window.onload = function()
             }
             if (localStorage.getItem("eligible") == false || localStorage.getItem("eligible") == "false")
 	    {
-		if(userArray[i].date != day)
+		if(localStorage.getItem("day") == day)
 		{
-               	  gameOver()
+		   gameOVer()
 		}
 	    }
             questionAlreadyAnswered = userArray[i].questionsAnswered
@@ -64,7 +64,7 @@ window.onload = function()
               generateQuestion()
             }
             //Checks to see if the user hasn't lost the game today
-            else if (userArray[i].date != day) {
+            else if (localStorage.getItem("day") != day) {
               firebase.database().ref('user/' + userArray[i].identification).update({
                 eligible: true,
                 gamesLeft: 2
@@ -259,6 +259,7 @@ function gameOver()
           {
             userArray[i].eligible = false
             localStorage.setItem("eligible", false)
+            localStorage.setItem("day", day)
           }
           var updatedAnsweredQuestionCount = questionAlreadyAnswered + questionsAnswered
           var amountOfQuestionsAsked = userArray[i].totalQuestions + questionsAsked
@@ -275,7 +276,6 @@ function gameOver()
           //If the users cheated, it resets all of the statistics that were recorded
           firebase.database().ref('user/' + userArray[i].identification).update({
               eligible: userArray[i].eligible,
-              date: day,
               questionsAnswered: updatedAnsweredQuestionCount,
               totalQuestions: amountOfQuestionsAsked,
               gamesWon: totalGamesWon,
