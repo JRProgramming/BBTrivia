@@ -51,39 +51,12 @@ window.onload = function()
               gameOver()
               //Checks for cheaters
             }
-            if (localStorage.getItem("eligible") == false || localStorage.getItem("eligible") == "false")
-	    {
-		if(localStorage.getItem("day") == day)
-		{
-		   alert("Sorry, you can't play today.")
-              	   location.href = "homepage.html"
-		}
-	    }
             questionAlreadyAnswered = userArray[i].questionsAnswered
             if(userArray[i].eligible == true)
             {
               generateQuestion()
             }
             //Checks to see if the user hasn't lost the game today
-            else if (localStorage.getItem("day") != day) {
-              firebase.database().ref('user/' + userArray[i].identification).update({
-                eligible: true,
-                gamesLeft: 2
-              })
-              firebase.database().ref('Completed/').set("Data is saved", function(error) {
-                  if (error) {
-                      alert("Data could not be saved." + error);
-                  } else {
-	            localStorage.getItem("eligible") == true
-                    generateQuestion()
-                  }
-               })
-            } //Checks to see if the user lost the last game, but hasn't played today
-            else
-            {
-              alert("Sorry, you can't play today.")
-              location.href = "homepage.html"
-            } //User has already lost the game and can no longer play
           }
         }
       }
@@ -260,7 +233,6 @@ function gameOver()
           {
             userArray[i].eligible = false
             localStorage.setItem("eligible", false)
-            localStorage.setItem("day", day)
           }
           var updatedAnsweredQuestionCount = questionAlreadyAnswered + questionsAnswered
           var amountOfQuestionsAsked = userArray[i].totalQuestions + questionsAsked
