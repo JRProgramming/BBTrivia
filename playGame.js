@@ -59,7 +59,7 @@ window.onload = function()
 	    else
 	    {
 	      alert("Sorry, you can no longer play the game.")
-	      location.href = "jrprogramming.github.io/BBTrivia/homepage"
+	      location.href = "https://jrprogramming.github.io/BBTrivia/homepage"
 	    }
             //Checks to see if the user hasn't lost the game today
           }
